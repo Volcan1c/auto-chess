@@ -1,3 +1,5 @@
+import { StatusEnum } from '../../enums/StatusEnum';
+
 interface HeroConfig {
   initialX: number,
   initialY: number,
@@ -7,7 +9,8 @@ interface HeroConfig {
   hitPoints: number,
   initialMana: number,
   manaPerAttack: number,
-  manaPerHit: number
+  manaPerHit: number,
+  initialStatus: StatusEnum
 }
 
 export const AxeConfig: HeroConfig = {
@@ -20,4 +23,5 @@ export const AxeConfig: HeroConfig = {
   initialMana: 0,
   manaPerAttack: 15,
   manaPerHit: 15,
-}
+  initialStatus: StatusEnum.Bench
+};

@@ -24,8 +24,12 @@ export class Unit extends Character {
   }
 
   public move(x: number, y: number): void {
-    this.x = x;
-    this.y = y;
+    if (this.grid.isBlockEmpty(x, y)) {
+      this.grid.removeUnit(this);
+      this.x = x;
+      this.y = y;
+      this.grid.addUnit(this);
+    }
   }
 
   public getClosestEnemy(): Unit | undefined {

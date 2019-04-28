@@ -4,6 +4,7 @@ import { AxeConfig } from './config';
 
 export class Axe extends Hero {
   public constructor(
+    playerId: string,
     grid: Grid,
   ) {
     super(
@@ -17,7 +18,9 @@ export class Axe extends Hero {
         mana: AxeConfig.initialMana,
         hitPoints: AxeConfig.hitPoints,
         manaPerHit: AxeConfig.manaPerHit,
-        manaPerAttack: AxeConfig.manaPerAttack
+        manaPerAttack: AxeConfig.manaPerAttack,
+        status: AxeConfig.initialStatus,
+        playerId
       }
     )
   }

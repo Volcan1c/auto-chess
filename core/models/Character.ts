@@ -1,5 +1,5 @@
 import { Item } from './Item';
-import {v4 as uuid} from 'uuid';
+import { v4 as uuid } from 'uuid';
 
 export class Character {
   public inventory: Array<Item>;
@@ -15,5 +15,12 @@ export class Character {
 
   public getId(): string {
     return this.id;
+  }
+
+  public getCoordinates(): {x: number, y: number} {
+    return {
+      x: this.x,
+      y: this.y
+    };
   }
 }
