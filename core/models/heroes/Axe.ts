@@ -8,16 +8,16 @@ export class Axe extends Hero {
   ) {
     super(
       {
+        grid,
         x: AxeConfig.initialX,
         y: AxeConfig.initialY,
-        grid,
         range: AxeConfig.range,
-        damage: AxeConfig.damage,
         armor: AxeConfig.armor,
-        hitPoints: AxeConfig.hitPoints,
+        damage: AxeConfig.damage,
         mana: AxeConfig.initialMana,
-        manaPerAttack: AxeConfig.manaPerAttack,
-        manaPerHit: AxeConfig.manaPerHit
+        hitPoints: AxeConfig.hitPoints,
+        manaPerHit: AxeConfig.manaPerHit,
+        manaPerAttack: AxeConfig.manaPerAttack
       }
     )
   }

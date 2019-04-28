@@ -1,7 +1,7 @@
 import { Unit } from './Unit';
 
 export class Grid {
-  private contents: Array<Unit>;
+  public contents: Array<Unit>;
 
   public constructor(
     public width: number,
