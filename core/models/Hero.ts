@@ -15,6 +15,7 @@ export class Hero extends Unit {
       range: properties.range,
       armor: properties.armor,
       damage: properties.damage,
+      position: properties.position,
       status: properties.status,
       hitPoints: properties.hitPoints,
       playerId: properties.playerId

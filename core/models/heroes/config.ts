@@ -1,4 +1,5 @@
 import { StatusEnum } from '../../enums/StatusEnum';
+import { PositionEnum } from '../../enums/PositionEnum';
 
 interface HeroConfig {
   initialX: number,
@@ -10,6 +11,7 @@ interface HeroConfig {
   initialMana: number,
   manaPerAttack: number,
   manaPerHit: number,
+  initialPosition: PositionEnum,
   initialStatus: StatusEnum
 }
 
@@ -23,5 +25,6 @@ export const AxeConfig: HeroConfig = {
   initialMana: 0,
   manaPerAttack: 15,
   manaPerHit: 15,
-  initialStatus: StatusEnum.Bench
+  initialPosition: PositionEnum.Bench,
+  initialStatus: StatusEnum.Active
 };

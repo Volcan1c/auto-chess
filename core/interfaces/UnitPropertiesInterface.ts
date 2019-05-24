@@ -1,5 +1,6 @@
 import { Grid } from '../models/Grid';
 import { StatusEnum } from '../enums/StatusEnum';
+import { PositionEnum } from '../enums/PositionEnum';
 
 export interface UnitPropertiesInterface {
   x: number,
@@ -10,5 +11,6 @@ export interface UnitPropertiesInterface {
   armor: number,
   hitPoints: number,
   playerId: string,
+  position: PositionEnum,
   status: StatusEnum
 }

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "jest": {
     "verbose": true,
-    "moduleFileExtensions": ["js"]
+    "moduleFileExtensions": [
+      "js"
+    ]
   },
   "description": "A clone of the popular Dota2 mod",
   "main": "index.js",
