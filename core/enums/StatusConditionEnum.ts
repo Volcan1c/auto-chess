@@ -1,5 +1,4 @@
-export enum StatusEnum {
-  Bench = 'bench',
+export enum StatusConditionEnum {
   Active = 'active',
   Stunned = 'stunned',
   Taunted = 'taunted'

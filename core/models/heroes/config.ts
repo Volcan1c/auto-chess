@@ -1,4 +1,5 @@
-import { StatusEnum } from '../../enums/StatusEnum';
+import { StatusConditionEnum } from '../../enums/StatusConditionEnum';
+import { BoardStatusEnum } from '../../enums/BoardStatusEnum';
 
 interface HeroConfig {
   initialX: number,
@@ -10,7 +11,8 @@ interface HeroConfig {
   initialMana: number,
   manaPerAttack: number,
   manaPerHit: number,
-  initialStatus: StatusEnum
+  initialBoardStatus: BoardStatusEnum,
+  initialStatusCondition: StatusConditionEnum
 }
 
 export const AxeConfig: HeroConfig = {
@@ -23,5 +25,6 @@ export const AxeConfig: HeroConfig = {
   initialMana: 0,
   manaPerAttack: 15,
   manaPerHit: 15,
-  initialStatus: StatusEnum.Bench
+  initialBoardStatus: BoardStatusEnum.Bench,
+  initialStatusCondition: StatusConditionEnum.Active
 };
