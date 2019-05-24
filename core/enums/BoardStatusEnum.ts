@@ -1,4 +1,4 @@
-export enum PositionEnum{
+export enum BoardStatusEnum{
   Bench = 'bench',
   Active = 'active'
 }

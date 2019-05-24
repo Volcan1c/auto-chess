@@ -19,8 +19,8 @@ export class Axe extends Hero {
         hitPoints: AxeConfig.hitPoints,
         manaPerHit: AxeConfig.manaPerHit,
         manaPerAttack: AxeConfig.manaPerAttack,
-        position: AxeConfig.initialPosition,
-        status: AxeConfig.initialStatus,
+        boardStatus: AxeConfig.initialBoardStatus,
+        statusCondition: AxeConfig.initialStatusCondition,
         playerId
       }
     )

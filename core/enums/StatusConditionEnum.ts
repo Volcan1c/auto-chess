@@ -1,4 +1,4 @@
-export enum StatusEnum {
+export enum StatusConditionEnum {
   Active = 'active',
   Stunned = 'stunned',
   Taunted = 'taunted'

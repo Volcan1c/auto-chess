@@ -1,7 +1,7 @@
 import { Character } from './Character';
 import { Grid } from './Grid';
-import { StatusEnum } from '../enums/StatusEnum';
-import { PositionEnum } from '../enums/PositionEnum';
+import { StatusConditionEnum } from '../enums/StatusConditionEnum';
+import { BoardStatusEnum } from '../enums/BoardStatusEnum';
 import { UnitPropertiesInterface } from '../interfaces/UnitPropertiesInterface';
 
 export class Unit extends Character {
@@ -11,8 +11,8 @@ export class Unit extends Character {
   public hitPoints: number;
   public armor: number;
   public damage: number;
-  public position: PositionEnum;
-  public status: StatusEnum;
+  public boardStatus: BoardStatusEnum;
+  public statusCondition: StatusConditionEnum;
 
   public constructor(properties: UnitPropertiesInterface) {
     super(properties.x, properties.y);
@@ -22,8 +22,8 @@ export class Unit extends Character {
     this.hitPoints = properties.hitPoints;
     this.damage = properties.damage;
     this.armor = properties.armor;
-    this.position = properties.position;
-    this.status = properties.status;
+    this.boardStatus = properties.boardStatus;
+    this.statusCondition = properties.statusCondition;
   }
 
   public move(x: number, y: number): void {
@@ -59,7 +59,7 @@ export class Unit extends Character {
   }
 
   public calculateDistance(unit1: Unit, unit2: Unit): number {
-    if (unit1.position === PositionEnum.Bench || unit2.position === PositionEnum.Bench) {
+    if (unit1.boardStatus === BoardStatusEnum.Bench || unit2.boardStatus === BoardStatusEnum.Bench) {
       return -1;
     }
 

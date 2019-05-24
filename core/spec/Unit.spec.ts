@@ -1,7 +1,7 @@
 import { Unit } from '../models/Unit';
 import { Grid } from '../models/Grid';
-import { StatusEnum } from '../enums/StatusEnum';
-import { PositionEnum } from '../enums/PositionEnum';
+import { StatusConditionEnum } from '../enums/StatusConditionEnum';
+import { BoardStatusEnum } from '../enums/BoardStatusEnum';
 import { UnitPropertiesInterface } from '../interfaces/UnitPropertiesInterface';
 
 describe('A Unit', () => {
@@ -20,15 +20,15 @@ describe('A Unit', () => {
       armor: 0,
       hitPoints: 20,
       playerId: 'playerId',
-      position: PositionEnum.Active,
-      status: StatusEnum.Active
+      boardStatus: BoardStatusEnum.Active,
+      statusCondition: StatusConditionEnum.Active
     }
     unit = new Unit(initialConfig);
   });
 
   describe('when calculating the distance from another unit', () => {
     it('should return -1 when one of the two is in the bench', () => {
-      const unit2 = new Unit({...initialConfig, position: PositionEnum.Bench});
+      const unit2 = new Unit({...initialConfig, boardStatus: BoardStatusEnum.Bench});
 
       expect(unit.calculateDistance(unit, unit2)).toBe(-1);
     });
